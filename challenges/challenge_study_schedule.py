@@ -5,7 +5,10 @@ def study_schedule(permanence_period, target_time):
     count = 0
 
     for student in permanence_period:
-        if (student[0] <= target_time <= student[1]):
+
+        if (type(student[0]) != int or type(student[1]) != int):
+            return None
+        if (student[1] >= target_time >= student[0]):
             count += 1
 
     return count

@@ -16,17 +16,16 @@ def quick_sort(numbers, start, end):
 
 def partition(numbers, start, end):
     pivot = numbers[end]
-    delimiter = start - 1
+    delimit = start - 1
 
     for index in range(start, end):
         if numbers[index] <= pivot:
-            delimiter = delimiter + 1
-            numbers[index],
-            numbers[delimiter] = numbers[delimiter], numbers[index]
+            delimit = delimit + 1
+            numbers[index], numbers[delimit] = numbers[delimit], numbers[index]
 
-    numbers[delimiter + 1], numbers[end] = numbers[end], numbers[delimiter + 1]
+    numbers[delimit + 1], numbers[end] = numbers[end], numbers[delimit + 1]
 
-    return delimiter + 1
+    return delimit + 1
 
 
 def is_anagram(first_string, second_string):
